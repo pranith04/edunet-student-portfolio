@@ -162,7 +162,7 @@
         </div>
         <div class="section form-container">
             <h2>Send a Message</h2>
-            <form>
+            <form id="contactForm">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
                 
@@ -174,7 +174,43 @@
                 
                 <button type="submit" class="send-button">Send</button>
             </form>
+            <div id="error-message" style="color: red; margin-top: 10px;"></div>
         </div>
     </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            // Validate name
+            if (name === '') {
+                document.getElementById('error-message').textContent = 'Name is required.';
+                return;
+            }
+
+            // Validate email
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById('error-message').textContent = 'Please enter a valid email address.';
+                return;
+            }
+
+            // Validate message length
+            const wordCount = message.split(/\s+/).filter(word => word.length > 0).length; // Count words
+            if (wordCount > 2000) {
+                document.getElementById('error-message').textContent = 'Message cannot exceed 2000 words.';
+                return;
+            }
+
+            // If all validations pass, you can submit the form or perform further actions
+            document.getElementById('error-message').textContent = ''; // Clear any previous error messages
+            alert('Form submitted successfully!'); // Placeholder for actual submission
+        });
+    </script>
 </body>
 </html>

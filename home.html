@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f1ed;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Use flexbox */
+            flex-direction: column; /* Arrange children in a column */
+            min-height: 100vh; /* Ensure the body is at least the height of the viewport */
+        }
+        .container {
+            flex: 1; /* Allow the container to grow and fill available space */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #1d3557;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1d3557;
+        }
+        
+        .main-content {
+            display: flex;
+            margin-top: 50px;
+            align-items: center; 
+        }
+        .text-content {
+            flex: 1;
+            padding-right: 50px;
+        }
+        .image-content {
+            flex: 1;
+            display: flex;
+            justify-content: center; 
+        }
+        h1 {
+            font-size: 36px;
+            color: #1d3557;
+        }
+        h3 {
+            font-size: 24px;
+            color: #1d3557;
+            margin-top: 0;
+        }
+        p {
+            font-weight: 501;
+            color: #1d3557;
+            line-height: 1.6;
+        }
+        .profile-image {
+            width: 400px;  
+            height: 400px; 
+            border-radius: 200%;  
+            border: 5px solid #364d6a;  
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+            object-fit: cover;  
+        }
+        .social-icons {
+            display: flex;
+            align-items: center;
+        }
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            margin-left: 20px;
+            vertical-align: middle;
+        }
+        .social-icon:hover svg path {
+            fill: #1d3557; 
+        }
+        .social-icon path {
+            fill: #1d3557; 
+        }
+        .social-icon:hover path {
+            fill: #364d6a; 
+        }
+        footer {
+            background-color: #f9f1ed; /* Match the body background */
+            padding: 20px 0;
+            margin-top: auto; /* Push footer to the bottom */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-content {
+            max-width: 1200px; /* Same as container */
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-content p {
+            margin: 0;
+            color: #1d3557;
+        }
+        .social-icons {
+            display: flex;
+            align-items: center;
+        }
+        .social-icon {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Pranith</div>
+            <nav>
+                <a href="home.html">PORTFOLIO</a>
+                <a href="about.html">ABOUT</a>
+                <a href="projects.html">PROJECTS</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/bhava-pranith-127a02258/" target="_blank" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill="#1d3557"/>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/itspranith1611" target="_blank" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M23.953 4.57c-.885.392-1.83.656-2.825.775 1.014-.609 1.794-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.896-.956-2.173-1.55-3.594-1.55-2.719 0-4.928 2.209-4.928 4.928 0 .386.045.761.127 1.124-4.092-.205-7.72-2.165-10.148-5.144-.426.731-.669 1.577-.669 2.475 0 1.707.867 3.213 2.188 4.096-.807-.025-1.566-.247-2.228-.616v.061c0 2.386 1.693 4.373 3.946 4.826-.413.111-.848.171-1.293.171-.316 0-.624-.031-.928-.086.624 1.953 2.433 3.375 4.577 3.415-1.677 1.315-3.785 2.099-6.067 2.099-.394 0-.785-.023-1.169-.069 2.173 1.395 4.768 2.207 7.548 2.207 9.058 0 14.004-7.496 14.004-13.986 0-.213 0-.426-.015-.637.961-.693 1.8-1.56 2.462-2.549z" fill="#1d3557"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/pranith04" target="_blank" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="#1d3557"/>
+                    </svg>
+                </a>
+            </div>            
+        </header>
+        <div class="main-content">
+            <div class="text-content">
+                <h1>B Bhava Pranith</h1> 
+                <h3>A Bit About Me</h3>
+                <p>Hello! I'm Bhava Pranith, a B.Tech Computer Science and Engineering student at SRM University AP Amaravati.</p>
+                <p>With hands-on experience in a range of technologies including ReactJs, PHP, and MySQL, I'm excited about the future of technology and the endless possibilities it offers.</p>
+                <p>I'm always excited to work with others and bring innovative ideas to life. If you're interested in collaborating or just want to chat about tech, feel free to reach out!</p>
+                
+            </div>
+            <div class="image-content">
+                <img src="https://i.pinimg.com/736x/b4/08/f8/b408f8122b497dd58840bb1c99d02e23.jpg" class="profile-image" alt="Bhava Pranith Buddabathuni">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 Bhava Pranith. All rights reserved.</p>
+            <div class="social-icons">
+                <span>Follow me on:</span>
+                <a href="https://www.linkedin.com/in/bhava-pranith-127a02258/" target="_blank" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill="#1d3557"/>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/itspranith1611" target="_blank" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M23.953 4.57c-.885.392-1.83.656-2.825.775 1.014-.609 1.794-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.896-.956-2.173-1.55-3.594-1.55-2.719 0-4.928 2.209-4.928 4.928 0 .386.045.761.127 1.124-4.092-.205-7.72-2.165-10.148-5.144-.426.731-.669 1.577-.669 2.475 0 1.707.867 3.213 2.188 4.096-.807-.025-1.566-.247-2.228-.616v.061c0 2.386 1.693 4.373 3.946 4.826-.413.111-.848.171-1.293.171-.316 0-.624-.031-.928-.086.624 1.953 2.433 3.375 4.577 3.415-1.677 1.315-3.785 2.099-6.067 2.099-.394 0-.785-.023-1.169-.069 2.173 1.395 4.768 2.207 7.548 2.207 9.058 0 14.004-7.496 14.004-13.986 0-.213 0-.426-.015-.637.961-.693 1.8-1.56 2.462-2.549z" fill="#1d3557"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/pranith04" target="_blank" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="#1d3557"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

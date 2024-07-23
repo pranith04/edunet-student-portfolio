@@ -43,8 +43,8 @@
         .main-content {
             display: flex;
             gap: 40px;
-            flex-direction: row; /* Ensure the content is in a row */
-            align-items: center; /* Center align items */
+            flex-direction: row;
+            align-items: center;
         }
         .text-content {
             font-weight: 501;
@@ -55,9 +55,7 @@
             flex: 1;
         }
         .profile-image {
-            height: 500%;
-            width: 500%;  
-            max-width: 500px;  /* Set a maximum width for larger screens */
+            max-width: 500px;
             height: auto;
             border-radius: 10px;
         }
@@ -80,7 +78,29 @@
             vertical-align: middle;
         }
         .social-icon:hover svg path {
-            fill: #1d3557; /* Change color on hover */
+            fill: #1d3557;
+        }
+        
+        /* Footer and Resume Link Styles */
+        .footer-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            padding: 20px 0;
+            
+        }
+        
+        .resume-link {
+            text-decoration: none;
+            color: #1d3557;
+            font-weight: bold;
+            margin: 0 20px;
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+        }
+        
+        .resume-link:hover {
+            color: rgb(164, 188, 224); /* Change text color on hover */
         }
     </style>
 </head>
@@ -140,11 +160,15 @@
                 
                 <h2>Languages</h2>
                 <p>English, Telugu, Hindi, Tamil (Basic)</p>
-                
             </div>
             <div class="image-content">
                 <img src="https://i.pinimg.com/736x/b4/08/f8/b408f8122b497dd58840bb1c99d02e23.jpg" alt="Bhava Pranith Buddabathuni" class="profile-image">
             </div>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer-section">
+            <a href="pathresume.pdf" target="_blank" class="resume-link">View Resume</a>
         </div>
     </div>
 </body>
